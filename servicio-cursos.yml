@@ -13,9 +13,9 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka
   instance:
-      instance-id: instancia1
+      instance-id: ${spring.application.name}:${random.value}
 server:
-  port: 8001 
+  port: 0 
 springdoc:
   packages-to-scan: com.curso.controller
   paths-to-match: /**
