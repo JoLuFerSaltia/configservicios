@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/ej1_cursos?serverTimezone=UTC
+    username: root
+    password: Cur50_5pr1ng  
+  jpa:
+    hibernate:
+      naming.implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+      naming.physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+      instance-id: instancia1
+server:
+  port: 8001 
+springdoc:
+  packages-to-scan: com.curso.controller
+  paths-to-match: /**
